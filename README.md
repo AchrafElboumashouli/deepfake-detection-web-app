@@ -162,6 +162,30 @@ Start in this order:
 3. Open → http://localhost:3000
 
 ---
+## 📸 Application Screens
+
+### 🖥️ Main Interface
+![Interface](assets/interface.png)
+
+### 📤 Upload Page
+![Upload](assets/upload_interface.png)
+
+### 📚 Learn Page
+![Learn](assets/learn.png)
+
+### ℹ️ About Page
+![About](assets/about.png)
+
+### 🎬 Video Prediction Example
+
+| Step 1 | Step 2 |
+|--------|--------|
+| ![](assets/1.png) | ![](assets/2.png) |
+
+| Step 3 | Final Result |
+|--------|-------------|
+| ![](assets/3.png) | ![](assets/4.png) |
+
 
 ## 🛠️ Troubleshooting
 
