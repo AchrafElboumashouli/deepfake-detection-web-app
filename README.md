@@ -1,37 +1,38 @@
 # 🧠 Deepfake Detection Web Application
 
-A full-stack AI-powered web application designed to detect deepfake images and videos using advanced deep learning techniques. The system combines a Python-based backend for model inference with a modern and interactive Next.js frontend.
+A full-stack AI-powered web application designed to detect deepfake images and videos using advanced deep learning models. The system integrates a modern web interface with a Python backend to provide fast and reliable predictions.
 
 ---
 
 ## 🚀 Features
 
-* 🔍 Detect manipulated (deepfake) images
-* 🎥 Analyze videos for deepfake content
-* ⚡ Fast and efficient backend API
-* 🌐 Clean and responsive web interface
-* 📊 Clear prediction results and feedback
-* 🧩 Modular and scalable architecture
+* 🔍 Deepfake detection for images
+* 🎥 Video authenticity analysis
+* ⚡ Fast REST API backend
+* 🌐 Interactive and responsive web interface
+* 📊 Clear prediction results
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ System Architecture
 
-### Frontend
+The application follows a three-layer architecture:
 
-* Next.js
-* React
-* Tailwind CSS
+1. **Frontend (Next.js)**
 
-### Backend
+   * User interface
+   * Sends HTTP requests to backend
 
-* Python
-* Flask 
+2. **Backend (Python API)**
 
-### AI / Machine Learning
+   * Handles requests
+   * Loads ML models
+   * Returns predictions
 
-* Deep Learning model for deepfake detection
-* Image & video processing
+3. **Machine Learning Models**
+
+   * Image classification model
+   * Video analysis model
 
 ---
 
@@ -40,102 +41,152 @@ A full-stack AI-powered web application designed to detect deepfake images and v
 ```
 Deep_Fake_Detection_APPLICATION_WEB/
 
-├── app/                     # Next.js app directory (routing, pages)
-├── components/              # Reusable UI components
-├── public/                  # Static assets
-├── styles/                  # CSS / styling files
+├── app/                     # Next.js app (routing & pages)
+├── components/              # UI components
+├── public/                  # Static files
+├── styles/                  # CSS
 
-├── backend/                 # Python backend (API + ML model)
-│   ├── main.py              # Main server entry point
-│   ├── model_handler.py     # Model loading & prediction logic
-│   └── requirements.txt     # Python dependencies
+├── backend/                 # Python backend
+│   ├── main.py              # API entry point
+│   ├── model_handler.py     # ML logic
+│   └── requirements.txt
 
-├── docs/                    # Documentation files
+├── docs/                    # Documentation
 │   └── How_To_Run_Application_Web.md
 
 ├── assets/                  # Images & screenshots
 │   └── interface.png
 
-├── package.json             # Frontend dependencies
-├── next.config.js           # Next.js configuration
+├── package.json
+├── next.config.js
 ├── README.md
 └── .gitignore
 ```
 
+---
+
+## 📋 Prerequisites
+
+Make sure you have installed:
+
+* Node.js (v18 or higher)
+* Python (3.12 recommended)
+* pip
+* venv
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/deepfake-detection-web-app.git
-cd deepfake-detection-web-app
-```
-
----
-
-### 2. Backend Setup
-
-```bash
-cd backend
-python -m venv venv
-./venv/Scripts/Activate.ps1
-pip install -r requirements.txt
-python main.py
-```
-
-The backend server will start locally (e.g., http://127.0.0.1:5000).
-
----
-
-### 3. Frontend Setup
+### 🌐 Frontend
 
 ```bash
 npm install
 npm run dev
 ```
 
-The frontend will be available at:
-http://localhost:3000
+👉 Runs on: http://localhost:3000
 
 ---
 
-## 🔌 API Endpoints
+### 🧠 Backend
 
-| Endpoint           | Description               |
-| ------------------ | ------------------------- |
-| /api/predict       | Detect deepfake in images |
-| /api/predict-video | Detect deepfake in videos |
+```bash
+cd backend
+python -m venv venv
+```
+
+#### Activate environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+#### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+#### Run server
+
+```bash
+python main.py
+```
+
+👉 Runs on: http://localhost:5000
+
+---
+
+## 🤖 Machine Learning Models
+
+The application uses two pre-trained models:
+
+* `image_model.keras` → Detects manipulated images
+* `video_model.keras` → Analyzes videos
+
+📥 Download models:
+https://drive.google.com/file/d/1F2y1x0fB-7RPLPnIFsU92wSAVinzPahM/view?usp=sharing
+
+📂 Place them in:
+
+```
+backend/models/
+```
+
+Expected structure:
+
+```
+backend/
+└── models/
+    ├── image_model.keras
+    └── video_model.keras
+```
+
+---
+
+## ▶️ Running the Application
+
+Start in this order:
+
+1. Backend → `python main.py`
+2. Frontend → `npm run dev`
+3. Open → http://localhost:3000
+
+---
+
+## 🛠️ Troubleshooting
+
+| Issue                | Solution                          |
+| -------------------- | --------------------------------- |
+| Missing modules      | `pip install -r requirements.txt` |
+| Wrong Python version | Use Python 3.12                   |
+| Models not found     | Check `backend/models/`           |
+| Port already in use  | Change port or stop process       |
 
 ---
 
 ## 📸 Screenshots
 
-
-```markdown
+```
 ![Interface](assets/interface.png)
 ```
 
 ---
 
-## 🧪 How It Works
+## ⚠️ Important Notes
 
-1. User uploads an image or video
-2. Frontend sends the file to the backend API
-3. Backend processes the input using the trained model
-4. Prediction (Real / Fake) is returned
-5. Result is displayed in the UI
-
----
-
-## 📌 Future Improvements
-
-* 🔄 Improve model accuracy
-* ☁️ Deploy on cloud (AWS / Vercel / Render)
-* 🐳 Add Docker support
-* 🔐 User authentication system
+* Model files are not included in the repository (large size)
+* Always activate the virtual environment
+* Start backend before frontend
 
 ---
 
