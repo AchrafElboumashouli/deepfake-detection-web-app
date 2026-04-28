@@ -162,6 +162,7 @@ Start in this order:
 3. Open → http://localhost:3000
 
 ---
+
 ## 📸 Application Screens
 
 ### 🖥️ Main Interface
@@ -198,13 +199,6 @@ Start in this order:
 
 ---
 
-## 📸 Screenshots
-
-```
-![Interface](assets/interface.png)
-```
-
----
 
 ## ⚠️ Important Notes
 
